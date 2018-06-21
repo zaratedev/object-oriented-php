@@ -6,17 +6,17 @@
 class Task
 {
 
-  public $description = 'This is a description';
-  function __construct()
+  public $description;
+  function __construct($description)
   {
-    # code...
+    $this->description = $description;
   }
 }
 
 // Define a object of class Task
-$task = new Task();
-
-var_dump($task->description);
+$task = new Task('Aprendiendo OPP');
+$task2 = new Task('This is the task 2');
+var_dump($task2->description);
 
 
  ?>
