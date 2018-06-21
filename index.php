@@ -5,18 +5,24 @@
  */
 class Task
 {
-
   public $description;
+  public $completed = false;
+
   function __construct($description)
   {
     $this->description = $description;
+  }
+
+  public function complete()
+  {
+    $this->completed = true;
   }
 }
 
 // Define a object of class Task
 $task = new Task('Aprendiendo OPP');
-$task2 = new Task('This is the task 2');
-var_dump($task2->description);
+$task->complete();
+var_dump($task->completed);
 
 
  ?>
